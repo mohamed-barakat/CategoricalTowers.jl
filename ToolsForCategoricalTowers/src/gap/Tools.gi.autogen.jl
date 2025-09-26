@@ -16,6 +16,7 @@ InstallTrueMethod( IsFiniteCategory, IsInitialCategory );
   [
     [ "name", fail ],
     [ "minimal", false ],
+    [ "with_given_objects_methods", false ],
     [ "additional_operations", Immutable( [ ] ) ],
   ],
   function( CAP_NAMED_ARGUMENTS, doctrine_names )
@@ -71,9 +72,13 @@ InstallTrueMethod( IsFiniteCategory, IsInitialCategory );
     
     all_operations = RecNames( CAP_INTERNAL_METHOD_NAME_RECORD );
     
-    options.list_of_operations_to_install =
-      @Concatenation( List( options.list_of_operations_to_install, operation_name ->
-            CAP_INTERNAL_CORRESPONDING_WITH_GIVEN_OBJECTS_METHOD( operation_name, all_operations ) ) );
+    if (with_given_objects_methods)
+        
+        options.list_of_operations_to_install =
+          @Concatenation( List( options.list_of_operations_to_install, operation_name ->
+                  CAP_INTERNAL_CORRESPONDING_WITH_GIVEN_OBJECTS_METHOD( operation_name, all_operations ) ) );
+        
+    end;
     
     return DummyCategory( options );
     
