@@ -193,7 +193,7 @@
               return PairGAP( """
                       function( input_arguments... )
                         
-                        return ObjectConstructor( cat, operation_name( UnderlyingCategory( cat ) ) );
+                        return ObjectConstructor( cat, operation_name( AmbientCategory( cat ) ) );
                         
                       end
                       """, OperationWeight( ambient_cat, name ) );
@@ -207,7 +207,7 @@
                         
                         i_arg = @NTupleGAP( number_of_arguments, input_arguments... );
                         
-                        return ObjectConstructor( cat, operation_name( UnderlyingCategory( cat ), List( i_arg[2], UnderlyingCell ) ) );
+                        return ObjectConstructor( cat, operation_name( AmbientCategory( cat ), List( i_arg[2], UnderlyingCell ) ) );
                         
                       end
                       """, OperationWeight( ambient_cat, name ) );
@@ -232,7 +232,7 @@
                 function ( input_arguments... )
                   local underlying_cat, i_arg;
                   
-                  underlying_cat = UnderlyingCategory( cat );
+                  underlying_cat = AmbientCategory( cat );
                   
                   i_arg = @NTupleGAP( number_of_arguments, input_arguments... );
                   
@@ -281,7 +281,7 @@
                    object_datum = object_datum,
                    morphism_constructor = morphism_constructor,
                    morphism_datum = morphism_datum,
-                   underlying_category_getter_string = "UnderlyingCategory",
+                   underlying_category_getter_string = "AmbientCategory",
                    underlying_category = ambient_cat,
                    list_of_operations_to_install = list_of_operations_to_install,
                    supports_empty_limits = supports_empty_limits,
@@ -289,7 +289,7 @@
                    create_func_object = create_func_object,
                    create_func_morphism = create_func_morphism ) );
     
-    SetUnderlyingCategory( quotient_cat, ambient_cat );
+    SetAmbientCategory( quotient_cat, ambient_cat );
     
     if (CanCompute( ambient_cat, "SetOfObjectsOfCategory" ))
         
@@ -298,7 +298,7 @@
           function( quotient_cat )
             local ambient_cat, objects;
             
-            ambient_cat = UnderlyingCategory( quotient_cat );
+            ambient_cat = AmbientCategory( quotient_cat );
             
             objects = SetOfObjects( ambient_cat );
             
@@ -327,7 +327,7 @@
         AddMultiplyWithElementOfCommutativeRingForMorphisms( quotient_cat,
           function( quotient_cat, r, phi )
             
-            return MorphismConstructor( quotient_cat, Source( phi ), MultiplyWithElementOfCommutativeRingForMorphisms( UnderlyingCategory( quotient_cat ), r, UnderlyingCell( phi ) ), Target( phi ) );
+            return MorphismConstructor( quotient_cat, Source( phi ), MultiplyWithElementOfCommutativeRingForMorphisms( AmbientCategory( quotient_cat ), r, UnderlyingCell( phi ) ), Target( phi ) );
             
         end, OperationWeight( ambient_cat, "MultiplyWithElementOfCommutativeRingForMorphisms" ) );
     
@@ -350,13 +350,13 @@ end ) );
   function( quotient_cat )
     local ambient_cat;
     
-    ambient_cat = UnderlyingCategory( quotient_cat );
+    ambient_cat = AmbientCategory( quotient_cat );
     
     if (CanCompute( ambient_cat, "RandomObjectByInteger" ))
         
         AddRandomObjectByInteger( quotient_cat,
             function( quotient_cat, i )
-              return ObjectConstructor( quotient_cat, RandomObjectByInteger( UnderlyingCategory( quotient_cat ), i ) );
+              return ObjectConstructor( quotient_cat, RandomObjectByInteger( AmbientCategory( quotient_cat ), i ) );
         end, OperationWeight( ambient_cat, "RandomObjectByInteger" ) );
         
     end;
@@ -366,7 +366,7 @@ end ) );
         AddRandomMorphismWithFixedSourceAndRangeByInteger( quotient_cat,
             function( quotient_cat, S, R, i )
                 local alpha;
-                alpha = RandomMorphismWithFixedSourceAndRangeByInteger( UnderlyingCategory( quotient_cat ), UnderlyingCell( S ), UnderlyingCell( R ), i );
+                alpha = RandomMorphismWithFixedSourceAndRangeByInteger( AmbientCategory( quotient_cat ), UnderlyingCell( S ), UnderlyingCell( R ), i );
                 return MorphismConstructor( quotient_cat,  ObjectConstructor( quotient_cat, Source( alpha ) ), alpha, ObjectConstructor( quotient_cat, Target( alpha ) ) );
         end, OperationWeight( ambient_cat, "RandomMorphismWithFixedSourceAndRangeByInteger" ) );
         
@@ -377,7 +377,7 @@ end ) );
         AddRandomMorphismWithFixedSourceByInteger( quotient_cat,
             function( quotient_cat, S, i )
                 local alpha;
-                alpha = RandomMorphismWithFixedSourceByInteger( UnderlyingCategory( quotient_cat ), UnderlyingCell( S ), i );
+                alpha = RandomMorphismWithFixedSourceByInteger( AmbientCategory( quotient_cat ), UnderlyingCell( S ), i );
                 return MorphismConstructor( quotient_cat,  S, alpha, ObjectConstructor( quotient_cat, Target( alpha ) ) );
         end, OperationWeight( ambient_cat, "RandomMorphismWithFixedSourceByInteger" ) );
         
@@ -388,7 +388,7 @@ end ) );
         AddRandomMorphismWithFixedRangeByInteger( quotient_cat,
             function( quotient_cat, R, i )
                 local alpha;
-                alpha = RandomMorphismWithFixedRangeByInteger( UnderlyingCategory( quotient_cat ), UnderlyingCell( R ), i );
+                alpha = RandomMorphismWithFixedRangeByInteger( AmbientCategory( quotient_cat ), UnderlyingCell( R ), i );
                 return MorphismConstructor( quotient_cat,  ObjectConstructor( quotient_cat, Source( alpha ) ), alpha, R );
         end, OperationWeight( ambient_cat, "RandomMorphismWithFixedRangeByInteger" ) );
         
@@ -399,7 +399,7 @@ end ) );
         AddRandomMorphismByInteger( quotient_cat,
             function( quotient_cat, i )
                 local alpha;
-                alpha = RandomMorphismByInteger( UnderlyingCategory( quotient_cat ), i );
+                alpha = RandomMorphismByInteger( AmbientCategory( quotient_cat ), i );
                 return MorphismConstructor( quotient_cat,  ObjectConstructor( quotient_cat, Source( alpha ) ), alpha, ObjectConstructor( quotient_cat, Target( alpha ) ) );
         end, OperationWeight( ambient_cat, "RandomMorphismByInteger" ) );
     end;
@@ -408,7 +408,7 @@ end ) );
         
         AddRandomObjectByList( quotient_cat,
             function( quotient_cat, L )
-              return ObjectConstructor( quotient_cat, RandomObjectByList( UnderlyingCategory( quotient_cat ), L ) );
+              return ObjectConstructor( quotient_cat, RandomObjectByList( AmbientCategory( quotient_cat ), L ) );
         end, OperationWeight( ambient_cat, "RandomObjectByList" ) );
         
     end;
@@ -418,7 +418,7 @@ end ) );
         AddRandomMorphismWithFixedSourceAndRangeByList( quotient_cat,
             function( quotient_cat, S, R, L )
                 local alpha;
-                alpha = RandomMorphismWithFixedSourceAndRangeByList( UnderlyingCategory( quotient_cat ), UnderlyingCell( S ), UnderlyingCell( R ), L );
+                alpha = RandomMorphismWithFixedSourceAndRangeByList( AmbientCategory( quotient_cat ), UnderlyingCell( S ), UnderlyingCell( R ), L );
                 return MorphismConstructor( quotient_cat,  ObjectConstructor( quotient_cat, Source( alpha ) ), alpha, ObjectConstructor( quotient_cat, Target( alpha ) ) );
         end, OperationWeight( ambient_cat, "RandomMorphismWithFixedSourceAndRangeByList" ) );
         
@@ -429,7 +429,7 @@ end ) );
         AddRandomMorphismWithFixedSourceByList( quotient_cat,
             function( quotient_cat, S, L )
                 local alpha;
-                alpha = RandomMorphismWithFixedSourceByList( UnderlyingCategory( quotient_cat ), UnderlyingCell( S ), L );
+                alpha = RandomMorphismWithFixedSourceByList( AmbientCategory( quotient_cat ), UnderlyingCell( S ), L );
                 return MorphismConstructor( quotient_cat,  S, alpha, ObjectConstructor( quotient_cat, Target( alpha ) ) );
         end, OperationWeight( ambient_cat, "RandomMorphismWithFixedSourceByList" ) );
         
@@ -440,7 +440,7 @@ end ) );
         AddRandomMorphismWithFixedRangeByList( quotient_cat,
             function( quotient_cat, R, L )
                 local alpha;
-                alpha = RandomMorphismWithFixedRangeByList( UnderlyingCategory( quotient_cat ), UnderlyingCell( R ), L );
+                alpha = RandomMorphismWithFixedRangeByList( AmbientCategory( quotient_cat ), UnderlyingCell( R ), L );
                 return MorphismConstructor( quotient_cat,  ObjectConstructor( quotient_cat, Source( alpha ) ), alpha, R );
         end, OperationWeight( ambient_cat, "RandomMorphismWithFixedRangeByList" ) );
         
@@ -451,7 +451,7 @@ end ) );
         AddRandomMorphismByList( quotient_cat,
             function( quotient_cat, L )
                 local alpha;
-                alpha = RandomMorphismByList( UnderlyingCategory( quotient_cat ), L );
+                alpha = RandomMorphismByList( AmbientCategory( quotient_cat ), L );
                 return MorphismConstructor( quotient_cat,  ObjectConstructor( quotient_cat, Source( alpha ) ), alpha, ObjectConstructor( quotient_cat, Target( alpha ) ) );
         end, OperationWeight( ambient_cat, "RandomMorphismByList" ) );
         
@@ -475,7 +475,7 @@ end );
 @InstallMethod( \.,
         [ IsQuotientCategory, IsPosInt ],
   
-  ( quotient_cat, string_as_int ) -> UnderlyingCategory( quotient_cat )[NameRNam( string_as_int] ) / quotient_cat
+  ( quotient_cat, string_as_int ) -> AmbientCategory( quotient_cat )[NameRNam( string_as_int] ) / quotient_cat
 );
 # =#
 
@@ -490,7 +490,7 @@ end );
 @InstallMethod( /,
             [ IsString, IsQuotientCategory ],
   
-  ( str, quotient_cat ) -> (str / UnderlyingCategory( quotient_cat )) / quotient_cat
+  ( str, quotient_cat ) -> (str / AmbientCategory( quotient_cat )) / quotient_cat
 );
 
 ##
