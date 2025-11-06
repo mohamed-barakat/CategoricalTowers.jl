@@ -1,0 +1,35 @@
+name = "FpCategories"
+uuid = "b9f20f1b-1226-4811-b6a0-b2e47a225553"
+authors = [
+	"Mohamed Barakat <mohamed.barakat@uni-siegen.de>",
+	"Kamal Saleh <kamal.saleh@uni-siegen.de>"
+]
+
+# Transpiled from GAP's FpCategories v2025.11-05
+version = "0.0.1"
+
+[deps]
+CAP = "d64df2ee-d2bb-46f4-8cbc-f03bb858f8cb"
+CartesianCategories = "c5961c08-7b59-43f4-a15e-02b3e7c87ab8"
+ToolsForCategoricalTowers = "e2cf920d-0824-4cbb-97bb-0be40824f89f"
+QuotientCategories = "c103c924-3523-4680-a691-c88f3312ec70"
+FinSetsForCAP = "0a079e9b-4bc2-44fe-a89b-7607e4464786"
+
+[weakdeps]
+
+[extensions]
+
+[compat]
+julia = "1.11"
+CAP = "0.6"
+CartesianCategories = "~0.3.12"
+ToolsForCategoricalTowers = "~0.0.1"
+QuotientCategories = "~0.0.2"
+FinSetsForCAP = "~0.1.15"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+Documenter = "e30172f5-a6a5-5a46-863b-614d45cd2de4"
+
+[targets]
+test = ["Test", "Documenter"]
