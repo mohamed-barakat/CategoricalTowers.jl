@@ -29,3 +29,8 @@ echo "Pushed to ToolsForCategoricalTowers.jl"
 git subtree split --prefix=QuotientCategories -b QuotientCategories-split > /dev/null 2>&1
 git push https://${JULIA_SUBSPLIT_TOKEN}@github.com/homalg-project/QuotientCategories.jl.git QuotientCategories-split:master
 echo "Pushed to QuotientCategories.jl"
+
+# FpCategories
+git subtree split --prefix=FpCategories -b FpCategories-split > /dev/null 2>&1
+git push https://${JULIA_SUBSPLIT_TOKEN}@github.com/homalg-project/FpCategories.jl.git FpCategories-split:master
+echo "Pushed to FpCategories.jl"

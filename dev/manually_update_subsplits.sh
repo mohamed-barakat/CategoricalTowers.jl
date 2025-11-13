@@ -30,3 +30,8 @@ echo "Pushed to ToolsForCategoricalTowers.jl"
 git subtree split --prefix=QuotientCategories -b QuotientCategories-split
 git push git@github.com:${GITHUB_USER}/QuotientCategories.jl.git QuotientCategories-split:master
 echo "Pushed to QuotientCategories.jl"
+
+# FpCategories
+git subtree split --prefix=FpCategories -b FpCategories-split
+git push git@github.com:${GITHUB_USER}/FpCategories.jl.git FpCategories-split:master
+echo "Pushed to FpCategories.jl"
