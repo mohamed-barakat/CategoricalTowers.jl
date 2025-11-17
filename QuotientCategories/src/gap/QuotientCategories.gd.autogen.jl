@@ -19,12 +19,12 @@
 
 @DeclareOperation( "QuotientCategory", [ IsRecord ] );
 
-@DeclareAttribute( "AmbientCategory", IsQuotientCategory );
+@DeclareAttribute( "UnderlyingCategory", IsQuotientCategory );
 
-CapJitAddTypeSignature( "AmbientCategory", [ IsQuotientCategory ],
+CapJitAddTypeSignature( "UnderlyingCategory", [ IsQuotientCategory ],
   function ( input_types )
     
-    return CapJitDataTypeOfCategory( AmbientCategory( input_types[1].category ) );
+    return CapJitDataTypeOfCategory( UnderlyingCategory( input_types[1].category ) );
     
 end );
 
@@ -37,7 +37,7 @@ CapJitAddTypeSignature( "UnderlyingCell", [ IsQuotientCategoryObject ],
     
     @Assert( 0, IsQuotientCategory( input_types[1].category ) );
     
-    return CapJitDataTypeOfObjectOfCategory( AmbientCategory( input_types[1].category ) );
+    return CapJitDataTypeOfObjectOfCategory( UnderlyingCategory( input_types[1].category ) );
     
 end );
 
@@ -48,7 +48,7 @@ CapJitAddTypeSignature( "UnderlyingCell", [ IsQuotientCategoryMorphism ],
     
     @Assert( 0, IsQuotientCategory( input_types[1].category ) );
     
-    return CapJitDataTypeOfMorphismOfCategory( AmbientCategory( input_types[1].category ) );
+    return CapJitDataTypeOfMorphismOfCategory( UnderlyingCategory( input_types[1].category ) );
     
 end );
 

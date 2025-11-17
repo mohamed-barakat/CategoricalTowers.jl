@@ -4,8 +4,8 @@ authors = [
 	"Kamal Saleh <kamal.saleh@uni-siegen.de>"
 ]
 
-# Transpiled from GAP's QuotientCategories v2025.08-03
-version = "0.0.2"
+# Transpiled from GAP's QuotientCategories v2025.08-02
+version = "0.0.1"
 
 [deps]
 MatricesForHomalg = "29b9b1b6-efa6-450e-8188-a5a2c25df071"
