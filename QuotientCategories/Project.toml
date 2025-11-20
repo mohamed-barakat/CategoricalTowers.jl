@@ -23,6 +23,7 @@ CAP = "0.6"
 ToolsForCategoricalTowers = "0.0"
 LinearAlgebraForCAP = "~0.1.11"
 ModulePresentationsForCAP = "~0.1.7"
+MatricesForHomalg = "~0.1.4"
 
 [extras]
 Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
