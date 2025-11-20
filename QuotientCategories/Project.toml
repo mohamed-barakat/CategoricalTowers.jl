@@ -5,7 +5,7 @@ authors = [
 ]
 
 # Transpiled from GAP's QuotientCategories v2025.08-03
-version = "0.0.2"
+version = "0.1.0"
 
 [deps]
 MatricesForHomalg = "29b9b1b6-efa6-450e-8188-a5a2c25df071"
@@ -20,7 +20,7 @@ LinearAlgebraForCAP = "3dc4824f-14ac-4ab7-8a60-75dbcd4a9d60"
 [compat]
 julia = "1.11"
 CAP = "0.6"
-ToolsForCategoricalTowers = "0.0"
+ToolsForCategoricalTowers = "0.1"
 LinearAlgebraForCAP = "~0.1.11"
 ModulePresentationsForCAP = "~0.1.7"
 MatricesForHomalg = "~0.1.4"
