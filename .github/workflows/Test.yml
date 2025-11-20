@@ -29,7 +29,6 @@ jobs:
           - 'nightly'
         os:
           - ubuntu-latest
-          - macOS-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
