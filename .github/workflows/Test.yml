@@ -25,11 +25,10 @@ jobs:
       fail-fast: false
       matrix:
         julia-version:
-          - '1.11'
+          - '1.12'
           - 'nightly'
         os:
           - ubuntu-latest
-          - macOS-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4

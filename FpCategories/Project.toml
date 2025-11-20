@@ -6,7 +6,7 @@ authors = [
 ]
 
 # Transpiled from GAP's FpCategories v2025.11-05
-version = "0.0.1"
+version = "0.1.0"
 
 [deps]
 CAP = "d64df2ee-d2bb-46f4-8cbc-f03bb858f8cb"
@@ -23,8 +23,8 @@ FinSetsForCAP = "0a079e9b-4bc2-44fe-a89b-7607e4464786"
 julia = "1.11"
 CAP = "0.6"
 CartesianCategories = "~0.3.12"
-ToolsForCategoricalTowers = "~0.0.1"
-QuotientCategories = "~0.0.2"
+ToolsForCategoricalTowers = "0.1"
+QuotientCategories = "0.1"
 FinSetsForCAP = "~0.1.15"
 
 [extras]
