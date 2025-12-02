@@ -28,6 +28,7 @@ FreydCategoriesForCAP = "cec356e3-7627-4f73-8308-af32cbf46c2b"
 [extensions]
 
 [compat]
+julia = "1.11, 1.12"
 MatricesForHomalg = "~0.1.5"
 CAP = "~0.6.13"
 MonoidalCategories = "~0.2.12"
