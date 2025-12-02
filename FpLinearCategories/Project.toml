@@ -1,0 +1,50 @@
+name = "FpLinearCategories"
+uuid = "607c1b85-d155-426e-91c9-9defd76aa9e1"
+authors = [
+	"Mohamed Barakat <mohamed.barakat@uni-siegen.de>",
+	"Kamal Saleh <kamal.saleh@uni-siegen.de>"
+]
+
+# Transpiled from GAP's FpLinearCategories v2025.11-08
+version = "0.1.0"
+
+[deps]
+MatricesForHomalg = "29b9b1b6-efa6-450e-8188-a5a2c25df071"
+CAP = "d64df2ee-d2bb-46f4-8cbc-f03bb858f8cb"
+MonoidalCategories = "bfd98c86-782f-4b94-909f-74167f1eb613"
+CartesianCategories = "c5961c08-7b59-43f4-a15e-02b3e7c87ab8"
+ToolsForCategoricalTowers = "e2cf920d-0824-4cbb-97bb-0be40824f89f"
+Toposes = "36a15fe6-6211-457f-8fdb-aa2e0d2f3052"
+FinSetsForCAP = "0a079e9b-4bc2-44fe-a89b-7607e4464786"
+QuotientCategories = "c103c924-3523-4680-a691-c88f3312ec70"
+FpCategories = "b9f20f1b-1226-4811-b6a0-b2e47a225553"
+LinearClosuresForCAP = "1f080b7b-ff6a-46b3-9ade-986f655adc86"
+AdditiveClosuresForCAP = "bbee75d5-3cb4-4478-8ae7-eddc7864e69e"
+LinearAlgebraForCAP = "3dc4824f-14ac-4ab7-8a60-75dbcd4a9d60"
+FreydCategoriesForCAP = "cec356e3-7627-4f73-8308-af32cbf46c2b"
+
+[weakdeps]
+
+[extensions]
+
+[compat]
+MatricesForHomalg = "~0.1.5"
+CAP = "~0.6.13"
+MonoidalCategories = "~0.2.12"
+CartesianCategories = "~0.3.12"
+ToolsForCategoricalTowers = "0.1"
+Toposes = "~0.1.14"
+FinSetsForCAP = "~0.1.15"
+QuotientCategories = "0.1"
+FpCategories = "0.1"
+LinearClosuresForCAP = "~0.1.2"
+AdditiveClosuresForCAP = "~0.1.4"
+LinearAlgebraForCAP = "~0.1.13"
+FreydCategoriesForCAP = "~0.1.13"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+Documenter = "e30172f5-a6a5-5a46-863b-614d45cd2de4"
+
+[targets]
+test = ["Test", "Documenter"]

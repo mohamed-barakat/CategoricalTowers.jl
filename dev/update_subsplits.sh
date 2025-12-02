@@ -34,3 +34,8 @@ echo "Pushed to QuotientCategories.jl"
 git subtree split --prefix=FpCategories -b FpCategories-split > /dev/null 2>&1
 git push https://${JULIA_SUBSPLIT_TOKEN}@github.com/homalg-project/FpCategories.jl.git FpCategories-split:master
 echo "Pushed to FpCategories.jl"
+
+# FpLinearCategories
+git subtree split --prefix=FpLinearCategories -b FpLinearCategories-split > /dev/null 2>&1
+git push https://${JULIA_SUBSPLIT_TOKEN}@github.com/homalg-project/FpLinearCategories.jl.git FpLinearCategories-split:master
+echo "Pushed to FpLinearCategories.jl"
