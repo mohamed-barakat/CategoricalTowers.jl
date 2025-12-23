@@ -4,6 +4,7 @@
 # Reading the declaration part of the package.
 #
 
-include( "gap/LinearClosuresOfPathCategoriesAndTheirQuotients.gd.autogen.jl");
+include( "gap/LinearClosuresOfPathCategoriesAndTheirQuotients.gd.autogen.jl" );
+include( "gap/GroebnerBasesForLinearClosuresOfPathCategories.gd.autogen.jl" );
 
-include( "gap/AlgebroidFromDataTables.gd.autogen.jl");
+include( "gap/AlgebroidFromDataTables.gd.autogen.jl" );

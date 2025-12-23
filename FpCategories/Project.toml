@@ -5,8 +5,8 @@ authors = [
 	"Kamal Saleh <kamal.saleh@uni-siegen.de>"
 ]
 
-# Transpiled from GAP's FpCategories v2025.11-05
-version = "0.1.0"
+# Transpiled from GAP's FpCategories v2025.12-03
+version = "0.1.1"
 
 [deps]
 CAP = "d64df2ee-d2bb-46f4-8cbc-f03bb858f8cb"
@@ -21,7 +21,7 @@ FinSetsForCAP = "0a079e9b-4bc2-44fe-a89b-7607e4464786"
 
 [compat]
 julia = "1.11"
-CAP = "0.6"
+CAP = "~0.6.15"
 CartesianCategories = "~0.3.12"
 ToolsForCategoricalTowers = "0.1"
 QuotientCategories = "0.1"

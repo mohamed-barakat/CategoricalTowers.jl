@@ -10,8 +10,9 @@
   
   @FunctionWithNamedArguments(
   [
-    [ "admissible_order", fail ],
-    [ "FinalizeCategory", false ],
+    [ "admissible_order", Immutable( "dp" ) ], ## like QPA
+    [ "skeletal", fail ],
+    [ "FinalizeCategory", true ],
     [ "range_of_HomStructure", fail ],
   ],
   function( CAP_NAMED_ARGUMENTS, q )
@@ -33,15 +34,13 @@
     
     C.category_as_first_argument = true;
     
-    if (admissible_order == fail)
-      
-      C.admissible_order = "dp";
-      
-    else
-      
-      C.admissible_order = admissible_order;
-      
+    if (@not admissible_order in [ "dp", "Dp" ])
+        
+        Error( "only \"dp\" and \"Dp\" admissible orders are supported!\n" );
+        
     end;
+    
+    C.admissible_order = admissible_order;
     
     SetIsFinitelyPresentedCategory( C, true );
     
@@ -51,6 +50,10 @@
             Triple( NumberOfObjects( q ),
                     NumberOfMorphisms( q ),
                     ListN( IndicesOfSources( q ), IndicesOfTargets( q ), ( s, t ) -> PairGAP( -1 + s, -1 + t ) ) ) );
+    
+    if (skeletal == true)
+        SetIsSkeletalCategory( C, true );
+    end;
     
     C.compiler_hints =
       @rec( category_attribute_names =
