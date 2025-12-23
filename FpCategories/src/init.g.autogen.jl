@@ -10,7 +10,6 @@ include( "gap/GroebnerBasesForPathCategories.gd.autogen.jl");
 include( "gap/QuotientsOfPathCategories.gd.autogen.jl");
 include( "gap/CategoryFromNerveData.gd.autogen.jl");
 include( "gap/Tools.gd.autogen.jl");
-include( "gap/ToolsMethodRecordDeclarations.autogen.gd.autogen.jl");
 include( "gap/SimplicialCategory.gd.autogen.jl");
 
 #= comment for Julia

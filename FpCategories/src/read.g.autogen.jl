@@ -13,8 +13,6 @@ include( "gap/GroebnerBasesForPathCategories.gi.autogen.jl");
 include( "gap/QuotientsOfPathCategories.gi.autogen.jl");
 include( "gap/CategoryFromNerveData.gi.autogen.jl");
 include( "gap/Tools.gi.autogen.jl");
-include( "gap/ToolsMethodRecord.gi.autogen.jl");
-include( "gap/ToolsMethodRecordInstallations.autogen.gi.autogen.jl");
 include( "gap/ToolsDerivedMethods.gi.autogen.jl");
 include( "gap/SimplicialCategory.gi.autogen.jl");
 
