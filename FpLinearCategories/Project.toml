@@ -6,7 +6,7 @@ authors = [
 ]
 
 # Transpiled from GAP's FpLinearCategories v2025.12-02
-version = "0.1.1"
+version = "0.1.2"
 
 [deps]
 MatricesForHomalg = "29b9b1b6-efa6-450e-8188-a5a2c25df071"
@@ -35,9 +35,9 @@ MonoidalCategories = "~0.2.12"
 CartesianCategories = "~0.3.12"
 ToolsForCategoricalTowers = "0.1"
 Toposes = "~0.1.14"
-FinSetsForCAP = "~0.1.15"
+FinSetsForCAP = "0.2"
 QuotientCategories = "0.1"
-FpCategories = "0.1"
+FpCategories = "~0.1.2"
 LinearClosuresForCAP = "~0.1.2"
 AdditiveClosuresForCAP = "~0.1.4"
 LinearAlgebraForCAP = "~0.1.13"
