@@ -6,7 +6,7 @@ authors = [
 ]
 
 # Transpiled from GAP's FpLinearCategories v2026.01-01
-version = "0.1.3"
+version = "0.1.4"
 
 [deps]
 MatricesForHomalg = "29b9b1b6-efa6-450e-8188-a5a2c25df071"

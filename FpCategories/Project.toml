@@ -6,7 +6,7 @@ authors = [
 ]
 
 # Transpiled from GAP's FpCategories v2026.01-05
-version = "0.1.4"
+version = "0.1.5"
 
 [deps]
 CAP = "d64df2ee-d2bb-46f4-8cbc-f03bb858f8cb"
