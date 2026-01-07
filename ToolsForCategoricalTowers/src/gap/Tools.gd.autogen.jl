@@ -604,11 +604,13 @@ DeclareGlobalVariable( "RECORD_OF_COMPACT_NAMES_OF_CATEGORICAL_OPERATIONS" );
 @DeclareGlobalFunction( "PositionsOfSublist" );
 
 #! @Description
-#!  The input is a category <A>cat</A> and a list of objects therein, such that the list $L$ of all possible finite coproducts is finite.
-#!  The output is the list $L$.
-#! @Arguments cat, objects
+#!  The input is a cocartesian category <A>cat</A> and a list <A>objs</A> of objects therein of length $l$,
+#!  such that the list of all possible finite coproducts is finite.
+#!  The output is a list of lists of pairs.
+#!  Each pair consists of a sublist $I$ of <C>(1):(l)</C> and the coproduct of the sublist objs[I].
+#! @Arguments cat, objs
 #! @Returns a list of objects
 @DeclareOperation( "AllCoproducts",
-        [ IsCapCategory && IsCocartesianCategory, IsList ] );
+        [ IsCapCategory, IsList ] );
 
 @DeclareOperation( "OneMutableGAP", [ IsCapCategoryMorphism ] );
