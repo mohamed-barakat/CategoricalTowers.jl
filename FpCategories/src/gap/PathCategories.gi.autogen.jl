@@ -294,7 +294,9 @@
         
     end;
     
-    Finalize( C );
+    if (FinalizeCategory)
+        Finalize( C );
+    end;
     
     return C;
     
